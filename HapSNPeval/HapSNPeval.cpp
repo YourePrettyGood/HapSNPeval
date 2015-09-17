@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
    }
    if (optind < argc) { //Read in the non-option argument, ignore any others
       input_alignment_file = argv[optind];
-      input_alignment.open(input_alignment_file);
+      input_alignment.open(input_alignment_file, ios_base::in);
       if (!input_alignment) {
          cerr << "Unable to open input alignment file." << endl;
          helpflag = 5;
